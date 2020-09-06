@@ -1,1 +1,855 @@
- 
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerRegular.eot');
+    src: url('MullerRegular.eot?#iefix') format('embedded-opentype'),
+        url('MullerRegular.woff2') format('woff2'),
+        url('MullerRegular.woff') format('woff'),
+        url('MullerRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('fonts/UniNeueHeavy.eot');
+    src: url('fonts/UniNeueHeavy.eot?#iefix') format('embedded-opentype'),
+        url('fonts/UniNeueHeavy.woff2') format('woff2'),
+        url('fonts/UniNeueHeavy.woff') format('woff'),
+        url('fonts/UniNeueHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('fonts/UniNeueBold.eot');
+    src: url('fonts/UniNeueBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/UniNeueBold.woff2') format('woff2'),
+        url('fonts/UniNeueBold.woff') format('woff'),
+        url('fonts/UniNeueBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('fonts/UniNeueBlack.eot');
+    src: url('fonts/UniNeueBlack.eot?#iefix') format('embedded-opentype'),
+        url('fonts/UniNeueBlack.woff2') format('woff2'),
+        url('fonts/UniNeueBlack.woff') format('woff'),
+        url('fonts/UniNeueBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    src: url('fonts/UniNeueRegular.eot');
+    src: url('fonts/UniNeueRegular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/UniNeueRegular.woff2') format('woff2'),
+        url('fonts/UniNeueRegular.woff') format('woff'),
+        url('fonts/UniNeueRegular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Regular.eot');
+    src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('fonts/MyriadPro-Regular.woff') format('woff'),
+        url('fonts/MyriadPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*************************GLOBAL PROPERTY*************************/
+body {
+    color: #ffffff;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+/*-------------------------INDEX------------------------*/
+/*************************HEADER*************************/
+.main-header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    min-height: 130px;
+    background-color: #6bc9bd;
+}
+.main-header > div {
+    display: flex;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-logo {
+    margin-right: 301px;
+    margin-top: 35px;
+}
+.site-navigation {
+    margin-right: 94px;
+}
+.navigation-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    flex-wrap: wrap;
+    margin-top: 58px;
+}
+.navigation-item {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.navigation-item a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+.navigation-item:nth-child(odd) {
+    font-family: "UniNeue", sans-serif;
+    font-weight: bold;
+}
+.navigation-item:nth-child(even) {
+    font-family: "Myriad Pro", sans-serif;
+}
+.navigation-item:not(:last-child)::after {
+    content: "/";
+    padding-left: 23px;
+    padding-right: 23px;
+    font-weight: bold;
+}
+.navigation-item a:hover:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0.5;
+    bottom: 0px;
+}
+.navigation-item a:hover {
+    font-weight: bold;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+.social-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 40px;
+}
+.social-list li:not(:last-child) {
+    margin-right: 29px;
+}
+.social-facebook {
+    padding-right: 15px;
+    padding-bottom: 25px;
+    background-image: url(images/fb-icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.social-facebook:hover {
+    background-image: url(images/fb-icon-hover.png);
+    transition: 0.7s;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+.social-vkontakte {
+    padding-right: 35px;
+    padding-bottom: 30px;
+    background-image: url(images/vk-icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.social-vkontakte:hover {
+    background-image: url(images/vk-icon-hover.png);
+    transition: 0.7s;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+/*************************MAIN*************************/
+.main-section {
+    padding-top: 130px;
+}
+.main-section > .carousel {
+    position: relative;
+    min-height: 850px;
+    background-image: url(content/background-carousel.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.main-section > .carousel::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 1;
+}
+.carousel .swiper-container {
+    height: 535px;
+    width: 1140px;
+    padding-top: 104px;
+}
+.swiper-slide::before {
+    content: " ";
+    position: absolute;
+    width: 463px;
+    height: 463px;
+    background-color: #6bc9bd;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: -1;
+    left: 30%;
+}
+.swiper-slide-1 h1 {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 120px;
+    font-weight: 750;
+    text-transform: uppercase;
+    text-align: left;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 895px;
+    margin-bottom: 42px;
+}
+.swiper-slide-2 h2 {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 120px;
+    font-weight: 750;
+    text-transform: uppercase;
+    text-align: left;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 895px;
+    margin-bottom: 42px;
+}
+.swiper-slide-3 h3 {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 120px;
+    font-weight: 750;
+    text-transform: uppercase;
+    text-align: left;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 895px;
+    margin-bottom: 42px;
+}
+.swiper-slide-1 p {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 845px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide-2 p {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 845px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide-3 p {
+    font-family: "Uni Neue", sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 845px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.carousel button {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+    border: 0px;
+    color: #ffffff;
+    text-align: center;
+    width: 259px;
+    left: 50%;
+    margin-left: -130px;
+    margin-top: 27px;
+}
+.carousel button:hover {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    width: 300px;
+    transition: 0.7s;
+    margin-left: -150px;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+.carousel button:hover::before {
+    width: 300px;
+    transition: 0.7s;
+}
+.carousel button::before {
+    content: " ";
+    position: absolute;
+    width: 259px;
+    height: 10px;
+    background-color: #6bc9bd;
+    opacity: 0.5;
+    top: 19.5px;
+    right: 0px;
+    z-index: -1;
+}
+.dividing-line {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #6bc9bd;
+}
+/*---------*/
+.about-us {
+    position: relative;
+    min-height: 715px;
+    background-image: url(content/background-about-us.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    outline: 1px solid transparent;
+    margin-top: -61px;
+}
+.about-us::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    z-index: 1;
+}
+.about-us > div {
+    position: relative;
+    z-index: 1;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.about-us > div::before {
+    content: " ";
+    position: absolute;
+    width: 263px;
+    height: 371px;
+    background-image: url(content/background-about-us-2.png);
+    background-repeat: no-repeat;
+    top: 197px;
+    right: 0px;
+}
+.about-us div h4 {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: white;
+    padding-top: 197px;
+}
+.about-us div p {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: bold;
+    line-height: 36px;
+    font-size: 24px;
+    color: white;
+    width: 700px;
+}
+/*-----------*/
+.our-suggestions {
+    background-color: #2c2c2c;
+    margin-top: -97px;
+    min-height: 1149px;
+}
+.our-suggestions h5 {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 55px;
+    margin-bottom: 61px;
+}
+.accordion {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.platform > p {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    width: 391px;
+    min-height: 60px;
+    text-align: right;
+    background-image: url(images/+.png);
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    margin-left: 31px;
+}
+.platform > p:hover {
+    background-image: url(images/+-hover.png);
+    background-repeat: no-repeat;
+    transition: 0.7s;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+.platform {
+    border: 1px solid #6bc9bd;
+    min-height: 121px;
+}
+.platform:not(:last-child) {
+    border-bottom: 0px solid;
+}
+.js-platform-description {
+    display: none;
+}
+.platform-description > div {
+    display: flex;
+    margin-left: 131px;
+    margin-bottom: 59px;
+}
+.platform-description-1 {
+    margin-right: 158px;
+}
+div[class^="platform-description-"] p {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+div[class^="platform-description-"] p span {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: none;
+    padding-left: 25px;
+}
+.platform-description button {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+    border: 0px;
+    color: #ffffff;
+    text-align: center;
+    width: 259px;
+    margin-left: 131px;
+    margin-bottom: 60px;
+}
+.platform-description button:hover {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    width: 300px;
+    transition: 0.7s;
+    margin-left: 110px;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+.platform-description button:hover::before {
+    width: 300px;
+    margin-left: -500px;
+    transition: 0.7s;
+}
+.platform-description button::before {
+    content: " ";
+    position: absolute;
+    width: 259px;
+    height: 10px;
+    background-color: #6bc9bd;
+    opacity: 0.5;
+    top: 19.5px;
+    right: 0px;
+    z-index: -1;
+}
+/*---------*/
+.request-section {
+    background-image: url(content/background-request.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 1042px;
+    margin-top: -137px;
+}
+.request-section h6 {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    margin-bottom: 56px;
+}
+.background-form {
+    width: 552px;
+    height: 822px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2c2c2c;
+    border: 1px solid #6bc9bd;
+}
+.form-application {
+    width: 418px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 42px;
+}
+.form-application fieldset {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 18px;
+    padding: 0px;
+    margin-left: 0px;
+}
+.form-application fieldset legend {
+    margin-bottom: 10px;
+}
+fieldset[class^="input-"] {
+    border: 0px;
+}
+fieldset[class^="input-"] input {
+    background-color: #2c2c2c;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+.input-name input {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.2);
+    padding-left: 23px;
+    width: 391px;
+    height: 46px;
+}
+.input-tel input {
+    padding-left: 23px;
+    width: 391px;
+    height: 46px;
+}
+.input-email input {
+    padding-left: 23px;
+    width: 391px;
+    height: 46px;
+}
+.input-sentence select {
+    padding-left: 23px;
+    width: 418px;
+    height: 52px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+}
+.input-floor label input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #6bc9bd;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 16px;
+}
+.input-floor label input:checked:before {
+    content: " ";
+    position: absolute;
+    background-color: #ffffff;
+    left: 50%;
+    top: 50%;
+    margin-left: -3.5px;
+    margin-top: -4px;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+.input-floor label:not(:last-child) {
+    margin-right: 34px;
+}
+fieldset[class^="input-"] textarea {
+    width: 391px;
+    height: 100px;
+    background-color: #2c2c2c;
+    padding-left: 23px;
+    padding-top: 12px;
+    resize: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.consent-input {
+    position: relative;
+}
+.consent-input input {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 5px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #6bc9bd;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 16px;
+    outline: none;
+}
+.consent-input input:checked {
+    background-image: url(images/checked.png);
+    background-repeat: no-repeat;
+    background-position: 50% center;
+}
+/*Validatiom-form*/
+fieldset {
+    position: relative;
+}
+#tel-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#name-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#E-mail-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#sentense-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#floor-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#comment-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+#consent-error {
+    display: block;
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+/*Validatiom-form^*/
+.form-button {
+    margin-top: 35px;
+    width: 259px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-button button:hover {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    width: 300px;
+    transition: 0.7s;
+    margin-left: -20px;
+    cursor: url(images/cursor_pointer.png), pointer;
+}
+.form-button button:hover::before {
+    width: 300px;
+    transition: 0.7s;
+}
+.form-button button {
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+    border: 0px;
+    color: #ffffff;
+    text-align: center;
+    width: 259px;
+}
+.form-button button::before {
+    content: " ";
+    position: absolute;
+    width: 259px;
+    height: 10px;
+    background-color: #6bc9bd;
+    opacity: 0.5;
+    top: 19.5px;
+    right: 0px;
+    z-index: -1;
+}
+/*-----------*/
+.contact-section {
+    background-color: #2c2c2c;
+    margin-top: 3px;
+    min-height: 464px;
+}
+.contact-section > div {
+    display: flex;
+    width: 1140px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-section div h6 {
+    padding-top: 66px;
+    margin-top: 0px;
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 54px;
+}
+.contact-list {
+    list-style: none;
+    padding-left: 0px;
+}
+li[class^="contact-item-"] {
+    padding-left: 61px;
+    margin-bottom: 43px;
+}
+li[class^="contact-item-address"] {
+    font-family: "Muller", sans-serif;
+    font-size: 18px;
+    width: 241px;
+    height: 41px;
+    background-image: url(images/pin.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+li[class^="contact-item-tel"] {
+    font-family: "Muller", sans-serif;
+    font-size: 18px;
+    width: 241px;
+    height: 41px;
+    background-image: url(images/phone.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+li[class^="contact-item-email"] {
+    font-family: "Muller", sans-serif;
+    font-size: 18px;
+    width: 241px;
+    height: 41px;
+    background-image: url(images/mail.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/*----------*/
+.main-footer {
+    background-color: #6bc9bd;
+    min-height: 127px;
+}
+.centering-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo-footer {
+    padding-top: 33px;
+}
+.authorship {
+    font-family: "Muller", sans-serif;
+    font-size: 18px;
+    padding-top: 36px;
+}
