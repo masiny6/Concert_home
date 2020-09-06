@@ -98,7 +98,7 @@ body {
 }
 .main-logo {
     margin-right: 301px;
-    margin-top: 35px;
+    padding-top: 35px;
 }
 .site-navigation {
     margin-right: 94px;
@@ -108,7 +108,7 @@ body {
     list-style: none;
     padding-left: 0px;
     flex-wrap: wrap;
-    margin-top: 58px;
+    padding-top: 37px;
 }
 .navigation-item {
     text-transform: uppercase;
@@ -150,6 +150,7 @@ body {
     list-style: none;
     padding-left: 0px;
     margin-top: 40px;
+    display: none;
 }
 .social-list li:not(:last-child) {
     margin-right: 29px;
@@ -182,14 +183,14 @@ body {
 .main-section {
     padding-top: 130px;
 }
-.main-section > .carousel {
+.carousel {
     position: relative;
     min-height: 850px;
     background-image: url(content/background-carousel.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.main-section > .carousel::before {
+.carousel::before {
     content: " ";
     position: absolute;
     top: 0px;
@@ -389,6 +390,7 @@ body {
     font-size: 48px;
     color: white;
     padding-top: 197px;
+    margin-bottom: 0px;
 }
 .about-us div p {
     font-family: "Uni Neue", sans-serif;
@@ -420,6 +422,7 @@ body {
     width: 1140px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 87px;
 }
 .platform > p {
     font-family: "Uni Neue", sans-serif;
@@ -832,7 +835,10 @@ li[class^="contact-item-email"] {
     display: flex;
     align-items: center;
 }
-
+#map {
+    width: 746px;
+    height: 464px;
+}
 /*----------*/
 .main-footer {
     background-color: #6bc9bd;
@@ -852,4 +858,429 @@ li[class^="contact-item-email"] {
     font-family: "Muller", sans-serif;
     font-size: 18px;
     padding-top: 36px;
+}
+.tablet-br {
+    display: none;
+}
+@media screen and (max-width: 1280px) {
+    .main-header {
+        min-height: 114px;
+    }
+    .main-header > div {
+        width: 707px;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: space-between;
+    }
+    .main-logo {
+        padding-top: 38px;
+        margin-right: 0px;
+    }
+    .main-logo img {
+        width: 220px;
+        height: 50px;
+    }
+    .site-navigation {
+        margin-right: 0px;
+    }
+    /*---------*/
+    .carousel {
+        min-height: 405px;
+        margin-top: -16px;
+    }
+    .carousel .swiper-container {
+        height: 264px;
+        width: 707px;
+        padding-top: 39px;
+    }
+    .swiper-slide-1 h1 {
+        font-size: 72px;
+        width: 545px;
+        margin-bottom: 37px;
+        margin-top: -12px;
+    }
+    .swiper-slide-2 h2 {
+        font-size: 72px;
+        width: 545px;
+        margin-bottom: 37px;
+        margin-top: -12px;
+    }
+    .swiper-slide-3 h3 {
+        font-size: 72px;
+        width: 545px;
+        margin-bottom: 37px;
+        margin-top: -12px;
+    }
+    .swiper-slide-1 p {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        width: 470px;
+    }
+    .swiper-slide-2 p {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        width: 470px;
+    }
+    .swiper-slide-3 p {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        width: 470px;
+    }
+    .carousel button {
+        font-size: 18px;
+        line-height: 48px;
+        letter-spacing: 0.9px;
+        width: 195px;
+        margin-left: -100px;
+        margin-top: 30px;
+    }
+    .carousel button:hover {
+        font-size: 28px;
+        letter-spacing: 1.4px;
+        width: 300px;
+        transition: 0.7s;
+        margin-left: -150px;
+        cursor: url(images/cursor_pointer.png), pointer;
+    }
+    .carousel button:hover::before {
+        width: 300px;
+        transition: 0.7s;
+    }
+    .carousel button::before {
+        content: " ";
+        position: absolute;
+        width: 195px;
+        height: 10px;
+        background-color: #6bc9bd;
+        opacity: 0.5;
+        top: 19.5px;
+        right: 0px;
+        z-index: -1;
+    }
+    .swiper-slide::before {
+        width: 264px;
+        height: 264px;
+        left: 31.5%;
+    }
+    /*---------*/
+    .about-us {
+        min-height: 467px;
+        margin-top: -36px;
+    }
+    .about-us > div {
+        width: 707px;
+    }
+    .about-us > div::before {
+        top: 46px;
+    }
+    .about-us div h4 {
+        font-size: 30px;
+        padding-top: 70px;
+    }
+    .about-us div p {
+        line-height: 30px;
+        font-size: 18px;
+        width: 388px;
+    }
+    /*---------*/
+    .our-suggestions {
+        background-color: #2c2c2c;
+        margin-top: -57px;
+        min-height: 972px;
+    }
+    .our-suggestions h5 {
+        font-family: "Uni Neue", sans-serif;
+        font-weight: 800;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        width: 707px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 39px;
+        margin-bottom: 40px;
+    }
+    .accordion {
+        width: 707px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 37px;
+    }
+    .platform > p {
+        font-size: 24px;
+        width: 340px;
+        background-position-y: 20%;
+        padding-top: 25px;
+    }
+    .platform-description > div {
+        margin-bottom: 0px;
+    }
+    .platform-description-1 {
+        margin-right: 62px;
+    }
+    div[class^="platform-description-"] p {
+        font-size: 18px;
+    }
+    div[class^="platform-description-"] p span {
+        font-size: 18px;
+        padding-left: 42px;
+    }
+    .platform-description button {
+        font-size: 18px;
+        letter-spacing: 0.9px;
+        width: 178px;
+    }
+    .platform-description button:hover {
+        margin-left: 80px;
+    }
+    .platform-description button::before {
+        width: 178px;
+    }
+    /*---------*/
+    .request-section {
+        min-height: 920px;
+        margin-top: -67px;
+    }
+    .request-section h6 {
+        font-size: 30px;
+        width: 707px;
+        padding-top: 25px;
+        margin-bottom: 25px;
+    }
+    .form-application {
+        width: 416px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 19px;
+    }
+    .background-form {
+        width: 507px;
+        height: 770px;
+    }
+    .form-application fieldset {
+        font-size: 16px;
+    }
+    .form-application fieldset legend {
+        margin-bottom: 10px;
+    }
+    .input-name input {
+        font-size: 16px;
+        padding-left: 21px;
+        width: 393px;
+        height: 43px;
+    }
+    .input-tel input {
+        font-size: 16px;
+        padding-left: 21px;
+        width: 393px;
+        height: 43px;
+    }
+    .input-email input {
+        font-size: 16px;
+        padding-left: 21px;
+        width: 393px;
+        height: 43px;
+    }
+    .input-sentence select {
+        font-size: 16px;
+        padding-left: 21px;
+        width: 393px;
+        height: 43px;
+    }
+    fieldset[class^="input-"] textarea {
+        width: 393px;
+        height: 100px;
+    }
+    .form-button {
+        margin-top: 34px;
+        width: 195px;
+    }
+    .form-button button:hover {
+        margin-left: -50px;
+    }
+    .form-button button:hover::before {
+        width: 300px;
+        transition: 0.7s;
+    }
+    .form-button button {
+        font-size: 18px;
+        line-height: 48px;
+        letter-spacing: 0.9px;
+        width: 195px;
+    }
+    .form-button button::before {
+        width: 195px;
+    }
+    /*-----------*/
+    .contact-section {
+        background-color: #2c2c2c;
+        margin-top: 3px;
+        min-height: 367px;
+    }
+    .contact-section > div {
+        width: 768px;
+    }
+    .contact-section div h6 {
+        padding-top: 66px;
+        margin-top: 0px;
+        font-size: 30px;
+        margin-bottom: 39px;
+    }
+    .contact {
+        padding-left: 31px;
+    }
+    li[class^="contact-item-"] {
+        padding-left: 62px;
+        margin-bottom: 19px;
+        width: 200px;
+        font-size: 16px;
+    }
+    /*----------*/
+    .main-footer {
+        min-height: 115px;
+    }
+    .centering-footer {
+        width: 707px;
+    }
+    .logo-footer {
+        padding-top: 33px;
+    }
+    .logo-footer img {
+        width: 220px;
+        height: 50px;
+    }
+    .social-list-tablet {
+        display: flex;
+        list-style: none;
+        padding-left: 0px;
+        margin-top: 35px;
+    }
+    .social-list-tablet li:not(:last-child) {
+        margin-right: 24px;
+    }
+    .authorship {
+        font-family: "Uni Neue", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        padding-top: 26px;
+        text-align: right;
+        width: 230px;
+    }
+    .tablet-br {
+        display: block;
+    }
+    #map {
+        width: 384px;
+        height: 367px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main-header {
+        min-height: 75px;
+    }
+    .main-header > div {
+        width: 280px;
+    }
+    .main-logo {
+        padding-top: 20px;
+    }
+    .main-logo img {
+        width: 153px;
+        height: 35px;
+    }
+    .site-navigation input {
+    }
+    .form__checkbox {
+        position: relative;
+        /* overflow: hidden; */
+        display: block;
+    }
+    
+    ..site-navigation input {
+        position: absolute;
+        right: 100%;
+        bottom: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .form__checkbox-label {
+        position: relative;
+        padding-left: 30px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        display: block;
+    }
+    .form__checkbox-label::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .form__checkbox-label::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: black;
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        opacity: 0;
+    }
+    .form__checkbox-input:checked + .form__checkbox-label::after {
+        opacity: 1;
+    }
+    /*
+    .site-navigation {
+        content: " ";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        right: 20px;
+        top: 26px;
+        
+        background-color: #ffffff;
+        border-radius: 2.4px;
+    }
+    .site-navigation::before {
+        content: " ";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        transform: rotate(45deg);
+        top: 10px;
+        background-color: #ffffff;
+        border-radius: 2.4px;
+    }
+    .site-navigation::after {
+        content: " ";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        top: 20px;
+        background-color: #ffffff;
+        border-radius: 2.4px;
+    }
+    .site-navigation-active {
+        content: " ";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        right: 20px;
+        top: 26px;
+        background-color: #ffffff;
+        border-radius: 2.4px;
+    }*/
+    .navigation-list {
+        display: none;
+    }
+    /*---------*/
 }

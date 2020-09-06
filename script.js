@@ -1,7 +1,6 @@
 
 //Замена цвета навигации при прокрутке
 $(window).scroll(function() {
-    console.log(window.pageYOffset);
     if (window.pageYOffset > 847) {
         $(".main-header").css("backgroundColor", "#2c2c2c");
         $(".social-facebook").on("mouseenter", function() {
@@ -29,7 +28,7 @@ $(window).scroll(function() {
 });
 
 //Аккардион
-$(".platform p").click(function() {
+$(".platform > p").click(function() {
     if ($(this).next(".platform-description").hasClass('js-platform-description')) {
         $(this).css("background-image", "url(images/-.png)");
         $(this).next(".platform-description").removeClass("js-platform-description");
@@ -88,3 +87,5 @@ $(document).ready(function() {
     // })
 
 });
+
+//Добавление социальных кнопок в футер(Tablet)
