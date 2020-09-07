@@ -67,6 +67,14 @@
     font-style: normal;
     font-display: swap;
 }
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 /*************************GLOBAL PROPERTY*************************/
 body {
     color: #ffffff;
@@ -475,6 +483,9 @@ div[class^="platform-description-"] p span {
     text-transform: none;
     padding-left: 25px;
 }
+.phone {
+    display: none;
+}
 .platform-description button {
     font-family: "Uni Neue", sans-serif;
     font-weight: 800;
@@ -866,6 +877,38 @@ li[class^="contact-item-email"] {
 }
 .social-list-tablet {
     display: none;
+}
+#preloader_malc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(107, 201, 189, 1);
+    z-index: 99;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+    font-family: "Uni Neue", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#preloader_malc div {
+    content: " ";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 10px solid ;
+    top: 50%;
+    left: 50%;
+    margin-top: -145px;
+    margin-left: -128px;
+    border: 0px;
+    background: linear-gradient(90deg, rgba(0,30,36,1) 0%, rgba(9,121,113,1) 32%, rgba(0,255,150,1) 80%);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation-name: loader;
+    animation-duration: 5s;
 }
 @media screen and (max-width: 1280px) {
     .main-header {

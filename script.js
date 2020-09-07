@@ -115,3 +115,13 @@ if ($(window).width() < 1280 && $(window).width() > 768) {
         }
     });
 }
+// Загрузка сайта
+window.onload = function() {
+
+    setTimeout(function() {
+
+        document.getElementById("preloader_malc").style.display = "none";
+
+    }, 400);
+
+};
