@@ -89,10 +89,29 @@ $(document).ready(function() {
 });
 
 //Замена текста в разделе 'Наши предложения' для мобильных устройств
-if ($(window).width()<768) {
+
+if ($(window).width() < 768) {
+    $(window).scroll(function() {
+        if (window.pageYOffset > 266) {
+            $(".main-header").css("backgroundColor", "#2c2c2c");
+        } else {
+            $(".main-header").css("backgroundColor", "#6bc9bd");
+        }
+    });
+    //
     $(".platform:eq(0) > p").text("Помещение 1. 10 кв.м.");
     $(".platform:eq(1) > p").text("Помещение 2. 8 кв.м.");
     $(".platform:eq(2) > p").text("Помещение 3. 15 кв.м.");
     $(".platform:eq(3) > p").text("Помещение 4. 10 кв.м.");
 
+}
+
+if ($(window).width() < 1280 && $(window).width() > 768) {
+    $(window).scroll(function() {
+        if (window.pageYOffset > 390) {
+            $(".main-header").css("backgroundColor", "#2c2c2c");
+        } else {
+            $(".main-header").css("backgroundColor", "#6bc9bd");
+        }
+    });
 }

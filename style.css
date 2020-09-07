@@ -103,6 +103,9 @@ body {
 .site-navigation {
     margin-right: 94px;
 }
+.site-navigation input {
+    display: none;
+}
 .navigation-list {
     display: flex;
     list-style: none;
@@ -885,6 +888,9 @@ li[class^="contact-item-email"] {
     .site-navigation {
         margin-right: 0px;
     }
+    .site-navigation input {
+        display: none;
+    }
     .social-list {
         display: none;
     }
@@ -935,8 +941,8 @@ li[class^="contact-item-email"] {
         width: 470px;
     }
     .swiper-pagination-bullet {
-    width: 11px !important;
-    height: 10px !important;
+        width: 11px !important;
+        height: 10px !important;
     }
     .carousel button {
         font-size: 18px;
@@ -1192,7 +1198,9 @@ li[class^="contact-item-email"] {
         width: 100%;
     }
     .main-header > div {
-        width: 280px;
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .main-logo {
         padding-top: 20px;
@@ -1209,6 +1217,7 @@ li[class^="contact-item-email"] {
         appearance: none;
         position: relative;
         top: 14px;
+        right: 40px;
         height: 5px;
         width: 30px;
         background-color: white;
