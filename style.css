@@ -1289,7 +1289,7 @@ li[class^="contact-item-email"] {
     }
     .site-navigation input:checked {
         transition: 1s;
-        margin-top: 20px;
+        margin-top: 10px;
         transform: rotate(-45deg);
     }
     .site-navigation input:checked::before {
