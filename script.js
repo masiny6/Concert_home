@@ -1,5 +1,6 @@
-
+$(document).ready(function() {
 //Замена цвета навигации при прокрутке
+// Dekstop
 $(window).scroll(function() {
     if (window.pageYOffset > 847) {
         $(".main-header").css("backgroundColor", "#2c2c2c");
@@ -26,20 +27,48 @@ $(window).scroll(function() {
         });
     }
 });
-
+// Phone
+if ($(window).width() < 768) {
+    $(".social-facebook").on("mouseenter", function() {
+        $(".social-facebook").css("backgroundImage", "url(images/fb-icon-scroll.png)");
+    });
+    $(".social-facebook").on("mouseleave", function() {
+        $(".social-facebook").css("backgroundImage", "url(images/fb-icon.png)");
+    });
+    $(".social-vkontakte").on("mouseenter", function() {
+        $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-scroll.png)");
+    });
+    $(".social-vkontakte").on("mouseleave", function() {
+        $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon.png)");
+    });
+    $(window).scroll(function() {
+        if (window.pageYOffset > 266) {
+            $(".main-header").css("backgroundColor", "#2c2c2c");
+        } else {
+            $(".main-header").css("backgroundColor", "#6bc9bd");
+        }
+    });
+}
+// Tablet
+if ($(window).width() < 1280 && $(window).width() > 768) {
+    $(window).scroll(function() {
+        if (window.pageYOffset > 390) {
+            $(".main-header").css("backgroundColor", "#2c2c2c");
+        } else {
+            $(".main-header").css("backgroundColor", "#6bc9bd");
+        }
+    });
+}
 //Аккардион
-$(".platform > p").click(function() {
-    if ($(this).next(".platform-description").hasClass('js-platform-description')) {
-        $(this).css("background-image", "url(images/-.png)");
-        $(this).next(".platform-description").removeClass("js-platform-description");
+$(".plus-minus").click(function() {
+    if ($(this).prop("checked")) {
+        $(this).parent().next(".js-platform-description").slideToggle();
     } else {
-        $(this).css("background-image", "url(images/+.png)");
-       $(this).next(".platform-description").addClass("js-platform-description");
+        $(this).parent().next(".js-platform-description").slideToggle();
     }
 });
 
 //Валидация формы
-$(document).ready(function() {
 
     /*
     * Translated default messages for the jQuery validation plugin.
@@ -79,6 +108,16 @@ $(document).ready(function() {
         }
     });
 
+    $('.js-form-login').validate({
+        submitHandler: function(form) {
+            // Отправка формы при успешной валидации
+            $(form).trigger('formSubmit');
+        },
+        errorPlacement: function(error, element) {
+            element.parent().append(error);
+        }
+    });
+
     $('.js-input-tel').inputmask('+7 (999) 999-99-99');
 
 
@@ -86,42 +125,24 @@ $(document).ready(function() {
     //     alert('Форма отправлена');
     // })
 
+// Закрытие модального окна Х
+$(".close-modal").on("click", function(){
+    $(".background-modal").css("display", "none");
 });
 
-//Замена текста в разделе 'Наши предложения' для мобильных устройств
+// Бургер меню
+$(".site-navigation input").on("click", function(){
+    if ($(".site-navigation input").prop("checked")) {
+        $(".navigation-list").css("transform", "translateY(0px)");
+        $(".social-list").css("transform", "translateX(0px)");
+        $(".site-navigation").css("max-width", "none")
+    } else {
+        $(".navigation-list").css("transform", "translateY(1000px)");
+        $(".social-list").css("transform", "translateX(1000px)");
+        $(".site-navigation").css("max-width", "0px")
+    }
+});
+//Select
+$(".input-sentence select").select2();
 
-if ($(window).width() < 768) {
-    $(window).scroll(function() {
-        if (window.pageYOffset > 266) {
-            $(".main-header").css("backgroundColor", "#2c2c2c");
-        } else {
-            $(".main-header").css("backgroundColor", "#6bc9bd");
-        }
-    });
-    //
-    $(".platform:eq(0) > p").text("Помещение 1. 10 кв.м.");
-    $(".platform:eq(1) > p").text("Помещение 2. 8 кв.м.");
-    $(".platform:eq(2) > p").text("Помещение 3. 15 кв.м.");
-    $(".platform:eq(3) > p").text("Помещение 4. 10 кв.м.");
-
-}
-
-if ($(window).width() < 1280 && $(window).width() > 768) {
-    $(window).scroll(function() {
-        if (window.pageYOffset > 390) {
-            $(".main-header").css("backgroundColor", "#2c2c2c");
-        } else {
-            $(".main-header").css("backgroundColor", "#6bc9bd");
-        }
-    });
-}
-// Загрузка сайта
-window.onload = function() {
-
-    setTimeout(function() {
-
-        document.getElementById("preloader_malc").style.display = "none";
-
-    }, 400);
-
-};
+});
