@@ -151,6 +151,7 @@ a {
 
 .navigation-item:not(:last-child)::after {
     content: "/";
+    font-family: "Myriad Pro";
     padding-left: 23px;
     padding-right: 23px;
     font-weight: bold;
@@ -170,7 +171,15 @@ a {
     font-weight: bold;
     cursor: url(images/cursor_pointer.png), pointer;
 }
-
+.swiper-button-next:after{
+    content:url(images/arrow-right.png)!important;
+}
+.swiper-button-prev:after{
+    content:url(images/arrow-left.png)!important;
+}
+.swiper-pagination-bullet {
+    outline: 0;
+}
 .social-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -365,7 +374,6 @@ a {
     left: 50%;
     margin-left: -110px;
 }
-
 .modal-login:hover {
     font-size: 28px;
     letter-spacing: 1.4px;
@@ -523,6 +531,7 @@ a {
     background-color: #6bc9bd;
     border-radius: 50%;
     cursor: pointer;
+    outline: 0;
 }
 
 .plus-minus::before {
@@ -735,18 +744,21 @@ fieldset[class^="input-"] input {
     padding-left: 23px;
     width: 391px;
     height: 46px;
+    outline: 0;
 }
 
 .input-tel input {
     padding-left: 23px;
     width: 391px;
     height: 46px;
+    outline: 0;
 }
 
 .input-email input {
     padding-left: 23px;
     width: 391px;
     height: 46px;
+    outline: 0;
 }
 
 .input-sentence select {
@@ -756,37 +768,42 @@ fieldset[class^="input-"] input {
     color: #ffffff;
     background-color: transparent;
     border: 1px solid #ffffff;
+    outline: 0 !important;
 }
-
+.select2-selection, .select2-selection--single {
+    height: 48px !important;
+}
 .select2-selection {
     border: 0px !important;
 }
-
+.select2-results__option {
+    border: 1px solid transparent;
+}
 .select2-results__option:hover {
     border: 1px solid white;
 }
-
 .select2-results__options {
     font-family: "Uni Neue", sans-serif;
     font-weight: 500;
     font-size: 18px;
 }
-
 .select2-selection__rendered {
     color: white !important;
     border: 1px solid white;
     background-color: #2c2c2c;
     width: 388px;
+    height: 48px;
+    line-height: 48px !important;
 }
-
+.select2-selection__arrow b {
+    margin-top: 10px !important;
+}
 .select2-results__options {
     background-color: #2c2c2c;
 }
-
 .select2-search {
     display: none !important;
 }
-
 .input-floor label input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -802,6 +819,7 @@ fieldset[class^="input-"] input {
     color: #fff;
     cursor: pointer;
     margin-right: 16px;
+    outline: 0px;
 }
 
 .input-floor label input:checked:before {
@@ -830,6 +848,7 @@ fieldset[class^="input-"] textarea {
     resize: none;
     color: #ffffff;
     border: 1px solid #ffffff;
+    outline: 0px;
 }
 
 .consent-input {
@@ -991,6 +1010,7 @@ fieldset {
     color: #ffffff;
     text-align: center;
     width: 259px;
+    outline: 0;
 }
 .form-button button::before {
     content: " ";
@@ -1200,6 +1220,7 @@ li[class^="contact-item-email"] {
     border: 1px solid white;
     background-color: #2c2c2c;
     color: white;
+    outline: 0;
 }
 
 .form-login button {
@@ -1542,6 +1563,16 @@ li[class^="contact-item-email"] {
     .select2-results__options {
         font-size: 16px;
     }
+    .select2-selection, .select2-selection--single {
+        height: 45px !important;
+    }
+    .select2-selection__rendered {
+        height: 45px;
+        line-height: 40px !important;
+    }
+    .select2-selection__arrow b {
+        margin-top: 8px !important;
+    }
     fieldset[class^="input-"] textarea {
         width: 393px;
         height: 100px;
@@ -1634,7 +1665,7 @@ li[class^="contact-item-email"] {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .main-header {
         min-height: 75px;
         width: 100%;
@@ -1678,6 +1709,7 @@ li[class^="contact-item-email"] {
         width: 30px;
         background-color: white;
         border-radius: 2.4px;
+        outline: 0;
     }
     .site-navigation input::before {
         content: " ";
@@ -2108,6 +2140,16 @@ li[class^="contact-item-email"] {
     }
     .select2-results__options {
         font-size: 14px;
+    }
+    .select2-selection, .select2-selection--single {
+        height: 36px !important;
+    }
+    .select2-selection__rendered {
+        height: 36px;
+        line-height: 35px !important;
+    }
+    .select2-selection__arrow b {
+        margin-top: 2px !important;
     }
     .input-floor label:not(:last-child) {
         margin-right: 20px;

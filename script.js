@@ -1,6 +1,31 @@
 $(document).ready(function() {
 //Замена цвета навигации при прокрутке
 // Dekstop
+if ($(window).width() > 1280) {
+    if (window.pageYOffset > 847) {
+        $(".main-header").css("backgroundColor", "#2c2c2c");
+        $(".social-facebook").on("mouseenter", function() {
+            $(".social-facebook").css("backgroundImage", "url(images/fb-icon-scroll.png)");
+        });
+        $(".social-facebook").on("mouseleave", function() {
+            $(".social-facebook").css("backgroundImage", "url(images/fb-icon.png)");
+        });
+        $(".social-vkontakte").on("mouseenter", function() {
+            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-scroll.png)");
+        });
+        $(".social-vkontakte").on("mouseleave", function() {
+            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon.png)");
+        });
+    }
+    else {
+        $(".main-header").css("backgroundColor", "#6bc9bd");
+        $(".social-facebook").on("mouseenter", function() {
+            $(".social-facebook").css("backgroundImage", "url(images/fb-icon-hover.png)");
+        });
+        $(".social-vkontakte").on("mouseenter", function() {
+            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-hover.png)");
+        });
+    }
 $(window).scroll(function() {
     if (window.pageYOffset > 847) {
         $(".main-header").css("backgroundColor", "#2c2c2c");
@@ -27,8 +52,14 @@ $(window).scroll(function() {
         });
     }
 });
+}
 // Phone
 if ($(window).width() < 768) {
+    if (window.pageYOffset > 266) {
+        $(".main-header").css("backgroundColor", "#2c2c2c");
+    } else {
+        $(".main-header").css("backgroundColor", "#6bc9bd");
+    }
     $(".social-facebook").on("mouseenter", function() {
         $(".social-facebook").css("backgroundImage", "url(images/fb-icon-scroll.png)");
     });
@@ -51,6 +82,11 @@ if ($(window).width() < 768) {
 }
 // Tablet
 if ($(window).width() < 1280 && $(window).width() > 768) {
+    if (window.pageYOffset > 390) {
+        $(".main-header").css("backgroundColor", "#2c2c2c");
+    } else {
+        $(".main-header").css("backgroundColor", "#6bc9bd");
+    }
     $(window).scroll(function() {
         if (window.pageYOffset > 390) {
             $(".main-header").css("backgroundColor", "#2c2c2c");
@@ -128,6 +164,7 @@ $(".plus-minus").click(function() {
 // Закрытие модального окна Х
 $(".close-modal").on("click", function(){
     $(".background-modal").css("display", "none");
+    
 });
 
 // Бургер меню
