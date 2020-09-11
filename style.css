@@ -65,7 +65,9 @@
 body {
     color: #ffffff;
 }
-
+* {
+    outline: 0;
+}
 a {
     color: white;
     text-decoration: none;
@@ -117,7 +119,9 @@ a {
 .site-navigation input {
     display: none;
 }
-
+.menu-phone {
+    display: none;
+}
 .navigation-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -780,7 +784,7 @@ fieldset[class^="input-"] input {
     border: 1px solid transparent;
 }
 .select2-results__option:hover {
-    border: 1px solid white;
+    border: 1px solid #6bc9bd;
 }
 .select2-results__options {
     font-family: "Uni Neue", sans-serif;
@@ -1692,6 +1696,17 @@ li[class^="contact-item-email"] {
     .site-navigation {
         max-width: 0px;
         margin-right: 0px;
+    }
+    .menu-phone {
+        content: " ";
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 24px;
+        opacity: 0;
+        background-color: black;
     }
     .site-navigation input {
         display: block;
