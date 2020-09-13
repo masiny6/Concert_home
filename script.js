@@ -3,52 +3,84 @@ $(document).ready(function() {
 // Dekstop
 if ($(window).width() > 1280) {
     if (window.pageYOffset > 847) {
-        $(".main-header").css("backgroundColor", "#2c2c2c");
+        $(".main-header").addClass("main-header-js");
         $(".social-facebook").on("mouseenter", function() {
-            $(".social-facebook").css("backgroundImage", "url(images/fb-icon-scroll.png)");
+            $(".social-facebook").removeClass("social-facebook-hover-js");
+            $(".social-facebook").removeClass("social-facebook-standart-js");
+            $(".social-facebook").addClass("social-facebook-scroll-js");
         });
         $(".social-facebook").on("mouseleave", function() {
-            $(".social-facebook").css("backgroundImage", "url(images/fb-icon.png)");
+            $(".social-facebook").removeClass("social-facebook-scroll-js");
+            $(".social-facebook").addClass("social-facebook-standart-js");
         });
         $(".social-vkontakte").on("mouseenter", function() {
-            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-scroll.png)");
+            $(".social-vkontakte").removeClass("social-vkontakte-hover-js");
+            $(".social-vkontakte").removeClass("social-vkontakte-standart-js");
+            $(".social-vkontakte").addClass("social-vkontakte-scroll-js");
         });
         $(".social-vkontakte").on("mouseleave", function() {
-            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon.png)");
+            $(".social-vkontakte").removeClass("social-vkontakte-scroll-js");
+            $(".social-vkontakte").addClass("social-vkontakte-standart-js");
         });
     }
     else {
-        $(".main-header").css("backgroundColor", "#6bc9bd");
+        $(".main-header").removeClass("main-header-js");
         $(".social-facebook").on("mouseenter", function() {
-            $(".social-facebook").css("backgroundImage", "url(images/fb-icon-hover.png)");
+            $(".social-facebook").removeClass("social-facebook-standart-js");
+            $(".social-facebook").addClass("social-facebook-hover-js");
+        });
+        $(".social-facebook").on("mouseleave", function() {
+            $(".social-facebook").removeClass("social-facebook-hover-js");
+            $(".social-facebook").addClass("social-facebook-standart-js");
         });
         $(".social-vkontakte").on("mouseenter", function() {
-            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-hover.png)");
+            $(".social-vkontakte").removeClass("social-vkontakte-standart-js");
+            $(".social-vkontakte").addClass("social-vkontakte-hover-js");
+        });
+        $(".social-vkontakte").on("mouseleave", function() {
+            $(".social-vkontakte").removeClass("social-vkontakte-hover-js");
+            $(".social-vkontakte").addClass("social-vkontakte-standart-js");
         });
     }
 $(window).scroll(function() {
     if (window.pageYOffset > 847) {
-        $(".main-header").css("backgroundColor", "#2c2c2c");
+        $(".main-header").addClass("main-header-js");
         $(".social-facebook").on("mouseenter", function() {
-            $(".social-facebook").css("backgroundImage", "url(images/fb-icon-scroll.png)");
+            $(".social-facebook").removeClass("social-facebook-hover-js");
+            $(".social-facebook").removeClass("social-facebook-standart-js");
+            $(".social-facebook").addClass("social-facebook-scroll-js");
         });
         $(".social-facebook").on("mouseleave", function() {
-            $(".social-facebook").css("backgroundImage", "url(images/fb-icon.png)");
+            $(".social-facebook").removeClass("social-facebook-scroll-js");
+            $(".social-facebook").addClass("social-facebook-standart-js");
         });
         $(".social-vkontakte").on("mouseenter", function() {
-            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-scroll.png)");
+            $(".social-vkontakte").removeClass("social-vkontakte-hover-js");
+            $(".social-vkontakte").removeClass("social-vkontakte-standart-js");
+            $(".social-vkontakte").addClass("social-vkontakte-scroll-js");
         });
         $(".social-vkontakte").on("mouseleave", function() {
-            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon.png)");
+            $(".social-vkontakte").removeClass("social-vkontakte-scroll-js");
+            $(".social-vkontakte").addClass("social-vkontakte-standart-js");
         });
     }
     else {
-        $(".main-header").css("backgroundColor", "#6bc9bd");
+        $(".main-header").removeClass("main-header-js");
         $(".social-facebook").on("mouseenter", function() {
-            $(".social-facebook").css("backgroundImage", "url(images/fb-icon-hover.png)");
+            $(".social-facebook").removeClass("social-facebook-standart-js");
+            $(".social-facebook").addClass("social-facebook-hover-js");
+        });
+        $(".social-facebook").on("mouseleave", function() {
+            $(".social-facebook").removeClass("social-facebook-hover-js");
+            $(".social-facebook").addClass("social-facebook-standart-js");
         });
         $(".social-vkontakte").on("mouseenter", function() {
-            $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-hover.png)");
+            $(".social-vkontakte").removeClass("social-vkontakte-standart-js");
+            $(".social-vkontakte").addClass("social-vkontakte-hover-js");
+        });
+        $(".social-vkontakte").on("mouseleave", function() {
+            $(".social-vkontakte").removeClass("social-vkontakte-hover-js");
+            $(".social-vkontakte").addClass("social-vkontakte-standart-js");
         });
     }
 });
@@ -57,24 +89,14 @@ $(window).scroll(function() {
 if ($(window).width() < 768) {
     if (window.pageYOffset > 266) {
         $(".main-header").css("backgroundColor", "#2c2c2c");
+
     } else {
         $(".main-header").css("backgroundColor", "#6bc9bd");
     }
-    $(".social-facebook").on("mouseenter", function() {
-        $(".social-facebook").css("backgroundImage", "url(images/fb-icon-scroll.png)");
-    });
-    $(".social-facebook").on("mouseleave", function() {
-        $(".social-facebook").css("backgroundImage", "url(images/fb-icon.png)");
-    });
-    $(".social-vkontakte").on("mouseenter", function() {
-        $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon-scroll.png)");
-    });
-    $(".social-vkontakte").on("mouseleave", function() {
-        $(".social-vkontakte").css("backgroundImage", "url(images/vk-icon.png)");
-    });
     $(window).scroll(function() {
         if (window.pageYOffset > 266) {
             $(".main-header").css("backgroundColor", "#2c2c2c");
+
         } else {
             $(".main-header").css("backgroundColor", "#6bc9bd");
         }
@@ -164,6 +186,7 @@ $(".plus-minus").click(function() {
 // Закрытие модального окна Х
 $(".close-modal").on("click", function(){
     $(".background-modal").css("display", "none");
+    $("html").css("overflow-y", "scroll");
     
 });
 
@@ -183,3 +206,7 @@ $(".site-navigation input").on("click", function(){
 $(".input-sentence select").select2();
 
 });
+// Убираем скролл при открытии модального окна
+$(".modal-login").on("click", function(){
+    $("html").css("overflow-y", "hidden");
+})

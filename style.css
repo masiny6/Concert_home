@@ -89,7 +89,9 @@ a {
 
 
 /*************************HEADER*************************/
-
+.select2-container--default .select2-selection--single {
+    width: 100% !important;
+}
 .main-header {
     position: fixed;
     z-index: 2;
@@ -97,7 +99,9 @@ a {
     min-height: 130px;
     background-color: #6bc9bd;
 }
-
+.main-header-js {
+    background-color: #2c2c2c;
+}
 .main-header>div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -130,7 +134,7 @@ a {
     padding-left: 0px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-top: 37px;
+    padding-top: 40px;
 }
 
 .navigation-item {
@@ -228,8 +232,24 @@ a {
     transition: 0.7s;
     cursor: url(images/cursor_pointer.png), pointer;
 }
-
-
+.social-facebook-scroll-js {
+    background-image: url(images/fb-icon-scroll.png) !important;
+} 
+.social-facebook-standart-js {
+    background-image: url(images/fb-icon.png) !important;
+} 
+.social-vkontakte-scroll-js {
+    background-image: url(images/vk-icon-scroll.png) !important;
+} 
+.social-vkontakte-standart-js {
+    background-image: url(images/vk-icon.png) !important;
+}
+.social-facebook-hover-js {
+    background-image: url(images/fb-icon-hover.png) !important;
+}
+.social-vkontakte-hover-js {
+    background-image: url(images/vk-icon-hover.png) !important;
+} 
 /*************************MAIN*************************/
 
 .main-section {
@@ -277,7 +297,7 @@ a {
 .swiper-slide-1 h1 {
     font-family: "Uni Neue", sans-serif;
     font-size: 120px;
-    font-weight: 750px;
+    font-weight: 900;
     text-transform: uppercase;
     text-align: left;
     font-stretch: normal;
@@ -293,7 +313,7 @@ a {
 .swiper-slide-2 h2 {
     font-family: "Uni Neue", sans-serif;
     font-size: 120px;
-    font-weight: 750px;
+    font-weight: 900;
     text-transform: uppercase;
     text-align: left;
     font-stretch: normal;
@@ -309,7 +329,7 @@ a {
 .swiper-slide-3 h3 {
     font-family: "Uni Neue", sans-serif;
     font-size: 120px;
-    font-weight: 750px;
+    font-weight: 900;
     text-transform: uppercase;
     text-align: left;
     font-stretch: normal;
@@ -326,7 +346,7 @@ a {
     font-family: "Uni Neue", sans-serif;
     font-size: 20px;
     line-height: 48px;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -339,7 +359,7 @@ a {
     font-family: "Uni Neue", sans-serif;
     font-size: 20px;
     line-height: 48px;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -352,7 +372,7 @@ a {
     font-family: "Uni Neue", sans-serif;
     font-size: 20px;
     line-height: 48px;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -363,7 +383,7 @@ a {
 
 .modal-login {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 24px;
     line-height: 48px;
@@ -404,7 +424,7 @@ a {
     height: 10px;
     background-color: #6bc9bd;
     opacity: 0.5;
-    top: 10px;
+    top: 11px;
     right: -8px;
     z-index: -1;
 }
@@ -468,7 +488,7 @@ a {
     font-size: 48px;
     color: white;
     padding-top: 197px;
-    margin-bottom: 0px;
+    margin-bottom: 60px;
 }
 
 .about-us div p {
@@ -486,12 +506,12 @@ a {
 .our-suggestions {
     background-color: #2c2c2c;
     margin-top: -97px;
-    min-height: 1149px;
+    min-height: 900px;
 }
 
 .our-suggestions h5 {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 60px;
     text-transform: uppercase;
     text-align: center;
@@ -541,8 +561,8 @@ a {
 .plus-minus::before {
     content: " ";
     position: absolute;
-    top: 25px;
-    left: 16px;
+    top: 26px;
+    left: 17px;
     width: 28px;
     height: 6px;
     background-color: #2c2c2c;
@@ -553,8 +573,8 @@ a {
     position: absolute;
     width: 28px;
     height: 6px;
-    top: 25px;
-    left: 16px;
+    top: 26px;
+    left: 17px;
     background-color: #2c2c2c;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -605,7 +625,7 @@ a {
 
 div[class^="platform-description-"] p {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -624,7 +644,7 @@ div[class^="platform-description-"] p span {
 
 .platform-description .modal-login {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 24px;
     line-height: 48px;
@@ -690,7 +710,7 @@ div[class^="platform-description-"] p span {
 
 .request-section h6 {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 60px;
     text-transform: uppercase;
     text-align: center;
@@ -808,6 +828,9 @@ fieldset[class^="input-"] input {
 .select2-search {
     display: none !important;
 }
+.input-floor label {
+    cursor: url(images/cursor_pointer.png), pointer;
+}
 .input-floor label input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -824,6 +847,7 @@ fieldset[class^="input-"] input {
     cursor: pointer;
     margin-right: 16px;
     outline: 0px;
+    cursor: url(images/cursor_pointer.png), pointer;
 }
 
 .input-floor label input:checked:before {
@@ -857,12 +881,12 @@ fieldset[class^="input-"] textarea {
 
 .consent-input {
     position: relative;
-}
-
-.consent-input input {
     font-family: "Uni Neue", sans-serif;
     font-weight: 500;
     font-size: 14px;
+}
+
+.consent-input input {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -893,6 +917,8 @@ fieldset {
 }
 
 #tel-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -903,6 +929,8 @@ fieldset {
 }
 
 #name-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -913,6 +941,8 @@ fieldset {
 }
 
 #E-mail-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -923,6 +953,8 @@ fieldset {
 }
 
 #sentense-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -933,6 +965,8 @@ fieldset {
 }
 
 #floor-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -943,6 +977,8 @@ fieldset {
 }
 
 #comment-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -953,6 +989,8 @@ fieldset {
 }
 
 #consent-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -963,6 +1001,8 @@ fieldset {
 }
 
 #password-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -972,6 +1012,8 @@ fieldset {
 }
 
 #login-error {
+    font-family: "UniNeue", sans-serif;
+    font-weight: 500;
     display: block;
     font-size: 14px;
     color: red;
@@ -1002,7 +1044,7 @@ fieldset {
 }
 .form-button button {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 24px;
     line-height: 48px;
@@ -1051,7 +1093,7 @@ fieldset {
     padding-top: 66px;
     margin-top: 0px;
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 48px;
     color: #ffffff;
@@ -1062,7 +1104,9 @@ fieldset {
     list-style: none;
     padding-left: 0px;
 }
-
+.contact-item-address address {
+    font-style: normal;
+}
 li[class^="contact-item-"] {
     padding-left: 61px;
     margin-bottom: 43px;
@@ -1166,6 +1210,7 @@ li[class^="contact-item-email"] {
     background: rgba(0, 0, 0, 0.6);
     z-index: 98;
     display: none;
+    width: 100%;
 }
 
 .background-modal:target {
@@ -1185,7 +1230,7 @@ li[class^="contact-item-email"] {
 
 .background-login h2 {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     text-transform: uppercase;
     margin-left: auto;
     margin-right: auto;
@@ -1229,7 +1274,7 @@ li[class^="contact-item-email"] {
 
 .form-login button {
     font-family: "Uni Neue", sans-serif;
-    font-weight: 800;
+    font-weight: 900;
     font-size: 24px;
     line-height: 48px;
     letter-spacing: 1.2px;
@@ -1376,7 +1421,7 @@ li[class^="contact-item-email"] {
     }
     .swiper-pagination-bullet {
         width: 11px !important;
-        height: 10px !important;
+        height: 11px !important;
     }
     .swiper-slide::before {
         width: 264px;
@@ -1415,7 +1460,7 @@ li[class^="contact-item-email"] {
     }
     .our-suggestions h5 {
         font-family: "Uni Neue", sans-serif;
-        font-weight: 800;
+        font-weight: 900;
         font-size: 36px;
         text-transform: uppercase;
         text-align: center;
@@ -1465,7 +1510,7 @@ li[class^="contact-item-email"] {
     }
     .platform-description .modal-login {
         font-family: "Uni Neue", sans-serif;
-        font-weight: 800;
+        font-weight: 900;
         text-transform: uppercase;
         font-size: 24px;
         line-height: 48px;
@@ -1845,6 +1890,12 @@ li[class^="contact-item-email"] {
     .social-facebook {
         background-size: 10px 20px;
     }
+    .social-facebook:hover {
+        background-image: url(images/fb-icon-scroll.png);
+    }
+    .social-vkontakte:hover {
+        background-image: url(images/vk-icon-scroll.png);
+    }
     .social-vkontakte {
         background-size: 23px 13px;
     }
@@ -1898,7 +1949,7 @@ li[class^="contact-item-email"] {
     }
     .swiper-pagination-bullet {
         width: 11px !important;
-        height: 10px !important;
+        height: 11px !important;
     }
     .swiper-button-next {
         display: none !important;
@@ -2129,19 +2180,19 @@ li[class^="contact-item-email"] {
     .input-name input {
         font-size: 14px;
         padding-left: 10px;
-        width: 280px;
+        width: 279px;
         height: 35px;
     }
     .input-tel input {
         font-size: 14px;
         padding-left: 10px;
-        width: 280px;
+        width: 279px;
         height: 35px;
     }
     .input-email input {
         font-size: 14px;
         padding-left: 10px;
-        width: 280px;
+        width: 279px;
         height: 35px;
     }
     .input-sentence select {
@@ -2170,7 +2221,7 @@ li[class^="contact-item-email"] {
         margin-right: 20px;
     }
     fieldset[class^="input-"] textarea {
-        width: 280px;
+        width: 279px;
         height: 75px;
         font-size: 14px;
         padding-left: 10px;
